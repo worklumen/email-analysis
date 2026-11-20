@@ -1,0 +1,25 @@
+# Archives
+*.zip
+*.tar.gz
+*.tgz
+*.rar
+
+# Email and message files
+*.eml
+*.msg
+source/*/*/Congratulations your PA Insurance*
+source/*/*
+source/1795020946849032300/
+source/1795162585565032500/
+
+# System & OS artifacts
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+
