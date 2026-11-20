@@ -80,6 +80,10 @@ venv/
 ### Git History Sanitization
 All historical commits containing `.zip` bundles or uncompressed `.eml` files have been purged from Git revision history using `git filter-branch` followed by reflog expiration and aggressive garbage collection (`git gc --prune=now --aggressive`). The Git commit log contains only repository code and documentation markdown.
 
+**Verification Status**:
+- `git check-ignore -v` confirms active exclusion of `.zip` and `.eml` files.
+- `git rev-list --objects --all | grep -iE '\.(zip|eml)$'` returns zero objects in repository history.
+
 ---
 
 ## 3. Email Archives & Processing Chronology
@@ -88,6 +92,7 @@ All historical commits containing `.zip` bundles or uncompressed `.eml` files ha
 | :--- | :--- | :--- | :--- | :--- |
 | **`email458144603.zip`** | `rukmangadan.soi@gov.in` | 5 emails | 25-Oct-2026 to 31-Oct-2026 | Travel bookings, flight tax invoice, railway cancellation, NIC GovDrive decommission |
 | **`email-1653461983.zip`** | `ker.gdc.soi@gov.in` (Kerala & Lakshadweep Wing) | 12 emails, 4 PDFs | 19-Nov-2026 to 20-Nov-2026 | SGO NAKSHA deadlines, UPS pension meeting, UAV drone insurance, CORS network outages, BSNL receipts, staff leaves |
+| **`19.11.2026.Zip.zip`** & **`19112026.zip`** | `ker.gdc.soi@gov.in` | 12 emails, 4 PDFs each | 19-Nov-2026 to 20-Nov-2026 | Redundant client export copies of Archive 2; verified byte-level identical payload |
 
 ---
 
@@ -300,3 +305,15 @@ flowchart TD
    - Central monitoring centers (CORS GRB) operate on strict contractual SLA triggers (<95% daily threshold triggers vendor field team mobilization).
 3. **Strict Compliance Deadlines**:
    - Directives from Surveyor General's Office (SGO) regarding nationwide projects (such as NAKSHA Activity 3B and Milestone 4) carry same-day or 24-hour turnaround deadlines requiring immediate Directorate response.
+
+### Archive De-duplication & Metadata Analysis Learnings
+1. **Timestamped Export Prefixes in Webmail Clients**:
+   - Archives exported from the same NIC webmail / Zimbra session under different names (`19.11.2026.Zip.zip` vs `19112026.zip`) embed distinct Unix-epoch or sequential internal directory prefixes (e.g., `1795166876672032400/` vs `1795164663523032500/`).
+   - Naive zip-level binary hash comparison (`sha256sum archive.zip`) flags them as completely different files due to directory headers, metadata timestamps, and zip headers, even when the payload files inside are 100% byte-for-byte identical (matching MD5, CRC32, and payload sizes across all 16 items).
+   - Automated analysis pipelines must unpack or read zip entry tables and compare member checksums rather than comparing outer container hashes.
+
+### Prompt, Query & Operations Learnings
+1. **Prioritization of Inquiries**:
+   - Time-critical operational demands (such as immediate Excel template submissions for SGO project milestones and morning VC links for statutory pension migration) must be surfaced before passive newsletters, billing receipts, or personal leaves.
+2. **Git Hygiene for Sensitive Mail Records**:
+   - Handling mailbox exports demands rigorous hygiene: `.gitignore` must be verified using `git check-ignore`, and historical traces must be audited with `git rev-list --objects --all` to guarantee privacy compliance before pushing to remote origins.
