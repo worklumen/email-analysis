@@ -4,7 +4,7 @@ import email.policy
 import re
 from datetime import datetime
 
-source_dir = "temp" if os.path.exists("temp") and len(os.listdir("temp")) > 1 else "source"
+source_dir = "extracts" if os.path.exists("extracts") and len(os.listdir("extracts")) > 1 else "source"
 current_date = "2026-11-26"
 
 deadline_keywords = [

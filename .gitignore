@@ -19,8 +19,8 @@ source/1795162585565032500/
 source/1795*/
 
 # Temporary extraction directory
-temp/*
-!temp/.gitkeep
+extracts/*
+!extracts/.gitkeep
 
 # System & OS artifacts
 .DS_Store

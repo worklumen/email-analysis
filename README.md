@@ -54,7 +54,7 @@ This repository serves as an analytical knowledge base evaluating official and o
 │   ├── 23.11.26.rar                       # Archive: 23-Nov drone insurance, maps, NTDB
 │   ├── 24.11.26.zip                       # Archive: 24-Nov committee nominations, RD invoice
 │   └── 25.11.26.zip                       # Archive: 25-Nov NAKSHA milestone deliverables, AAI NOC
-└── temp/                                  # Temporary extraction workspace (tracked with .gitkeep)
+└── extracts/                              # Temporary extraction workspace (tracked with .gitkeep)
     └── .gitkeep                           # Gitkeep placeholder; extracted contents ignored by git
 ```
 
