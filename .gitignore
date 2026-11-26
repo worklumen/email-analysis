@@ -7,10 +7,16 @@
 # Email and message files
 *.eml
 *.msg
+*.mbox
+*.pst
+*.ost
+*.oft
+*.emlx
 source/*/*/Congratulations your PA Insurance*
 source/*/*
 source/1795020946849032300/
 source/1795162585565032500/
+source/1795*/
 
 # System & OS artifacts
 .DS_Store

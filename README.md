@@ -39,9 +39,17 @@ This repository serves as an analytical knowledge base evaluating official and o
 ├── .gitignore                             # Git ignore rules protecting archives and raw emails
 ├── LICENSE                                # Repository License (Apache 2.0)
 ├── README.md                              # Consolidated Single Master Documentation & Knowledge Base
+├── scripts/                               # Data processing and analysis automation scripts
+│   ├── analyze_daily_emails.py            # Daily email volume and breakdown analyzer
+│   └── print_chronology.py                # Chronological thread and subject extractor
 └── source/                                # Raw mail archives (ignored by git)
-    ├── email458144603.zip                 # Archive 1: Individual travel & IT notices (5 emails)
-    └── email-1653461983.zip               # Archive 2: Directorate operations & reports (12 emails, 4 PDFs)
+    ├── 19.11.2026.zip                     # Archive: 19-Nov operations & billing
+    ├── 20.11.26.rar                       # Archive: 20-Nov NAKSHA, geoid review, training
+    ├── 21.11.26.zip                       # Archive: 21-Nov vendor communications & PM visit
+    ├── 22.11.26.zip                       # Archive: 22-Nov BSNL billing batch & CORS reports
+    ├── 23.11.26.rar                       # Archive: 23-Nov drone insurance, maps, NTDB
+    ├── 24.11.26.zip                       # Archive: 24-Nov committee nominations, RD invoice
+    └── 25.11.26.zip                       # Archive: 25-Nov NAKSHA milestone deliverables, AAI NOC
 ```
 
 ---
@@ -91,8 +99,30 @@ All historical commits containing `.zip` bundles or uncompressed `.eml` files ha
 | Archive Source | Primary Inbox / Entity | Message Count | Period Covered | Core Domain |
 | :--- | :--- | :--- | :--- | :--- |
 | **`email458144603.zip`** | `rukmangadan.soi@gov.in` | 5 emails | 25-Oct-2026 to 31-Oct-2026 | Travel bookings, flight tax invoice, railway cancellation, NIC GovDrive decommission |
-| **`email-1653461983.zip`** | `ker.gdc.soi@gov.in` (Kerala & Lakshadweep Wing) | 12 emails, 4 PDFs | 19-Nov-2026 to 20-Nov-2026 | SGO NAKSHA deadlines, UPS pension meeting, UAV drone insurance, CORS network outages, BSNL receipts, staff leaves |
-| **`19.11.2026.Zip.zip`** & **`19112026.zip`** | `ker.gdc.soi@gov.in` | 12 emails, 4 PDFs each | 19-Nov-2026 to 20-Nov-2026 | Redundant client export copies of Archive 2; verified byte-level identical payload |
+| **`19.11.2026.zip`** (`email-1653461983.zip`) | `ker.gdc.soi@gov.in` | 12 emails, 4 PDFs | 19-Nov-2026 | SGO NAKSHA deadlines, UPS pension meeting, UAV drone insurance, CORS network outages, BSNL receipts, staff leaves |
+| **`20.11.26.rar`** | `ker.gdc.soi@gov.in` | 27 emails | 20-Nov-2026 | Geoid review meeting, Solid waste management, Chrome vulnerabilities, Central Translation Bureau training, CORS user lists |
+| **`21.11.26.zip`** | `ker.gdc.soi@gov.in` | 6 emails | 21-Nov-2026 | Hexagon CORS responses, BSNL ticket assignments, technical collaboration MoU |
+| **`22.11.26.zip`** | `ker.gdc.soi@gov.in` | 8 emails | 22-Nov-2026 | BSNL monthly landline billing batch, daily CORS uptime escalations |
+| **`23.11.26.rar`** | `ker.gdc.soi@gov.in` | 27 emails | 23-Nov-2026 | Trinity F90+ drone insurance quotations, Political Map of India approval, INVRF concept paper, NTDB status, PFMS bills |
+| **`24.11.26.zip`** | `ker.gdc.soi@gov.in` | 6 emails | 24-Nov-2026 | Internal screening committee nominations, RD subscription invoices, CORS uptime monitoring |
+| **`25.11.26.zip`** | `ker.gdc.soi@gov.in` | 14 emails | 25-Nov-2026 | NAKSHA milestone deliverables, AAI red/yellow zone flying NOC, NAS box submission, NTDB out-turn report |
+
+---
+
+## 3.1 Daily Email Volume Analysis (19-Nov-2026 to 25-Nov-2026)
+
+Statistical aggregation across all extracted mailbox dispatches processed by [analyze_daily_emails.py](file:///home/zentop/Projects/email-analysis/scripts/analyze_daily_emails.py):
+
+| Date | Total Received Files | Unique Message-IDs | Unique Subject Threads | Peak Traffic Categories |
+| :---: | :---: | :---: | :---: | :--- |
+| **2026-11-19** | **12** | 12 | 12 | SGO NAKSHA Activity 3B & M4 deadlines, UPS VC meeting, BSNL receipts |
+| **2026-11-20** | **27** | 25 | 24 | Geoid review, Central Translation Bureau 30-day course, Chrome CVE alerts, CORS users list |
+| **2026-11-21** | **6** | 6 | 6 | Hexagon field engineer coordination, BSNL customer task acknowledgment, MoU tie-ups |
+| **2026-11-22** | **8** | 8 | 3 | BSNL monthly telephone invoice dispatch across multiple directorate lines, CORS uptime |
+| **2026-11-23** | **27** | 26 | 23 | Drone 3rd-party liability insurance quotes, New Political Map approval, INVRF vertical datum paper |
+| **2026-11-24** | **6** | 6 | 4 | Committee nominations, RD subscription renewals, daily CORS station downtime |
+| **2026-11-25** | **14** | 14 | 14 | NAKSHA final milestone submissions, AAI airport red/yellow zone flight NOC, NTDB progress |
+| **Total** | **100** | **97** | **77** | **Average: ~14.3 emails / day (Peak: 27 on Nov 20 & Nov 23)** |
 
 ---
 
