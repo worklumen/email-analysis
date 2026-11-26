@@ -10,7 +10,7 @@ import email.utils
 from collections import defaultdict
 
 def main():
-    source_dir = "source"
+    source_dir = "temp" if os.path.exists("temp") and len(os.listdir("temp")) > 1 else "source"
     data = []
     skipped = []
 

@@ -15,7 +15,7 @@ import re
 from datetime import datetime
 
 CURRENT_DATE = datetime(2026, 11, 26, 12, 40)
-SOURCE_DIR = "source"
+SOURCE_DIR = "temp" if os.path.exists("temp") and len(os.listdir("temp")) > 1 else "source"
 
 def scan_mailbox():
     emails = []

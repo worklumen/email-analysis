@@ -46,14 +46,16 @@ This repository serves as an analytical knowledge base evaluating official and o
 │   ├── update_trackers.py                 # Automated tracker and reminder generator
 │   ├── analyze_daily_emails.py            # Daily email volume and breakdown analyzer
 │   └── print_chronology.py                # Chronological thread and subject extractor
-└── source/                                # Temporary raw mail archives (ignored by git)
-    ├── 19.11.2026.zip                     # Archive: 19-Nov operations & billing
-    ├── 20.11.26.rar                       # Archive: 20-Nov NAKSHA, geoid review, training
-    ├── 21.11.26.zip                       # Archive: 21-Nov vendor communications & PM visit
-    ├── 22.11.26.zip                       # Archive: 22-Nov BSNL billing batch & CORS reports
-    ├── 23.11.26.rar                       # Archive: 23-Nov drone insurance, maps, NTDB
-    ├── 24.11.26.zip                       # Archive: 24-Nov committee nominations, RD invoice
-    └── 25.11.26.zip                       # Archive: 25-Nov NAKSHA milestone deliverables, AAI NOC
+├── source/                                # Raw archives ONLY (zip, rar, etc. - ignored by git)
+│   ├── 19.11.2026.zip                     # Archive: 19-Nov operations & billing
+│   ├── 20.11.26.rar                       # Archive: 20-Nov NAKSHA, geoid review, training
+│   ├── 21.11.26.zip                       # Archive: 21-Nov vendor communications & PM visit
+│   ├── 22.11.26.zip                       # Archive: 22-Nov BSNL billing batch & CORS reports
+│   ├── 23.11.26.rar                       # Archive: 23-Nov drone insurance, maps, NTDB
+│   ├── 24.11.26.zip                       # Archive: 24-Nov committee nominations, RD invoice
+│   └── 25.11.26.zip                       # Archive: 25-Nov NAKSHA milestone deliverables, AAI NOC
+└── temp/                                  # Temporary extraction workspace (tracked with .gitkeep)
+    └── .gitkeep                           # Gitkeep placeholder; extracted contents ignored by git
 ```
 
 ---

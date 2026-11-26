@@ -1,7 +1,7 @@
 import os, email, email.policy, email.utils
 from collections import defaultdict
 
-source_dir = "source"
+source_dir = "temp" if os.path.exists("temp") and len(os.listdir("temp")) > 1 else "source"
 by_date = defaultdict(list)
 
 for root, dirs, files in os.walk(source_dir):

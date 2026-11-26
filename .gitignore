@@ -18,6 +18,10 @@ source/1795020946849032300/
 source/1795162585565032500/
 source/1795*/
 
+# Temporary extraction directory
+temp/*
+!temp/.gitkeep
+
 # System & OS artifacts
 .DS_Store
 Thumbs.db
