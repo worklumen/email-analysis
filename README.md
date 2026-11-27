@@ -112,10 +112,11 @@ All historical commits containing `.zip` bundles or uncompressed `.eml` files ha
 | **`23.11.26.rar`** | `ker.gdc.soi@gov.in` | 27 emails | 23-Nov-2026 | Trinity F90+ drone insurance quotations, Political Map of India approval, INVRF concept paper, NTDB status, PFMS bills |
 | **`24.11.26.zip`** | `ker.gdc.soi@gov.in` | 6 emails | 24-Nov-2026 | Internal screening committee nominations, RD subscription invoices, CORS uptime monitoring |
 | **`25.11.26.zip`** | `ker.gdc.soi@gov.in` | 14 emails | 25-Nov-2026 | NAKSHA milestone deliverables, AAI red/yellow zone flying NOC, NAS box submission, NTDB out-turn report |
+| **`26.11.26.zip`** | `ker.gdc.soi@gov.in` | 14 emails, 1 PDF | 26-Nov-2026 | NAKSHA 3b & M4 status return, CDDO RPAO accounts meeting, PFRDA NPS grievances, Microsoft CERT-In advisory |
 
 ---
 
-## 3.1 Daily Email Volume Analysis (19-Nov-2026 to 25-Nov-2026)
+## 3.1 Daily Email Volume Analysis (19-Nov-2026 to 26-Nov-2026)
 
 Statistical aggregation across all extracted mailbox dispatches processed by [analyze_daily_emails.py](file:///home/zentop/Projects/email-analysis/scripts/analyze_daily_emails.py):
 
@@ -128,7 +129,8 @@ Statistical aggregation across all extracted mailbox dispatches processed by [an
 | **2026-11-23** | **27** | 26 | 23 | Drone 3rd-party liability insurance quotes, New Political Map approval, INVRF vertical datum paper |
 | **2026-11-24** | **6** | 6 | 4 | Committee nominations, RD subscription renewals, daily CORS station downtime |
 | **2026-11-25** | **14** | 14 | 14 | NAKSHA final milestone submissions, AAI airport red/yellow zone flight NOC, NTDB progress |
-| **Total** | **100** | **97** | **77** | **Average: ~14.3 emails / day (Peak: 27 on Nov 20 & Nov 23)** |
+| **2026-11-26** | **14** (+1 pdf) | **14** | **12** | SGO NAKSHA deadline (27-Nov), RPAO CDDO meeting (27-Nov), PFRDA NPS redressal, CERT-In advisory |
+| **Total** | **114** (+1 pdf) | **111** | **86** | **Average: ~14.3 emails / day (Peaks: 27 on Nov 20 & Nov 23)** |
 
 ---
 
